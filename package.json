@@ -1,6 +1,6 @@
 {
   "name": "imageview",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "preview images in a browser and set their data uri in an input field",
   "main": "main.js",
   "dependencies": {},
