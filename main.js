@@ -54,7 +54,9 @@ var ImageView = function (options) {
   };
 
   this.preview = function () {
-    photoSelector.addEventListener('change', this.generate, false);
+    if (photoSelector) {
+      photoSelector.addEventListener('change', this.generate, false);
+    }
   };
 };
 
