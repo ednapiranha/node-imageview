@@ -20,17 +20,19 @@ describe('imageview', function () {
     }).to.throw('This needs to be input[type="file"]');
   });
 
-  it('should display an image preview and return the data uri', function (done) {
-    iv = new ImageView();
+  it('should display an image preview and return the data uri', function () {
+    iv = new ImageView({
+      previewSize: 200
+    });
 
     iv.generate({
       target: {
         files: ['test.png']
       }
-    }, function () {
-      document.getElementById('photo').value.should.match(/^data:image\/jpeg;base64/);
-      document.getElementById('preview').innerHTML.should.equal('<canvas width="100" height="100"></canvas>');
-      done();
     });
+
+    iv.preview();
+
+    document.getElementById('preview').innerHTML.toString().should.equal('<img width=\"200\">');
   });
 });

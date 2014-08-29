@@ -17,15 +17,14 @@ This is an alternative to using a file input and uploading via multipart - inste
       picField: 'photo',
       photoSelector: 'photo-picker',
       preview: 'preview',
-      quality: 0.4,
-      maxSize: 100
+      previewSize: 100
     });
 
     iv.preview();
 
 `picField` is where you want the data URI to be applied. `photoSelector` is where your file input is located. `preview` is where you want the canvas element to display the resized image.
 
-`picField`, `photoSelector` and `preview` are the document IDs for each DOM element. They default to the ones above if nothing is provided. `quality` defaults to 0.4 for JPEG quality and `maxSize` is the maximum width and height for the resized image.
+`picField`, `photoSelector` and `preview` are the document IDs for each DOM element. They default to the ones above if nothing is provided. `previewSize` is the maximum width and height for the preview image.
 
 ## Tests
 
