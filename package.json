@@ -1,14 +1,15 @@
 {
   "name": "imageview",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "preview images in a browser and set their data uri in an input field",
   "main": "main.js",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "~1.20.0",
-    "chai": "~1.9.1",
-    "mocha-phantomjs": "~3.4.1",
-    "browserify": "~4.1.6"
+    "browserify": "~4.1.6",
+    "chai": "^1.9.2",
+    "mocha": "^1.21.5",
+    "mocha-phantomjs": "^3.4.1",
+    "phantomjs": "^1.9.19"
   },
   "scripts": {
     "test": "browserify test/test.main.js > test/suite.bundle.js && ./node_modules/.bin/mocha-phantomjs test/tests.html"
@@ -25,6 +26,6 @@
     "image",
     "preview"
   ],
-  "author": "Edna Piranha <jen@ednapiranha.com> (http://ednapiranha.com)",
-  "license": "BSD"
+  "author": "Jen",
+  "license": "BSD-3-Clause"
 }
